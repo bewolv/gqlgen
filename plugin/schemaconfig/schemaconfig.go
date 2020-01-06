@@ -46,7 +46,7 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 			continue
 		}
 
-		fmt.Println("HELLLO")
+		fmt.Errorf("HELLLO")
 
 		if bd := schemaType.Directives.ForName("goModel"); bd != nil {
 			if ma := bd.Arguments.ForName("model"); ma != nil {
