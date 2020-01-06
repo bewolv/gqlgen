@@ -3,7 +3,6 @@ module github.com/bewolv/gqlgen
 go 1.12
 
 require (
-	github.com/bewolv/gqlgen v0.10.2
 	github.com/go-chi/chi v3.3.2+incompatible
 	github.com/gorilla/websocket v1.2.0
 	github.com/hashicorp/golang-lru v0.5.0
