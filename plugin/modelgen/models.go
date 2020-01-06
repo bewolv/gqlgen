@@ -86,6 +86,10 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 		SkipRuntime: true,
 	}
 
+	cfg.Directives["json"] = config.DirectiveConfig{
+		SkipRuntime: true,
+	}
+
 	// ! --------
 
 	err = cfg.Autobind(schema)
@@ -188,9 +192,26 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 				if isStruct(typ) && (fieldDef.Kind == ast.Object || fieldDef.Kind == ast.InputObject) {
 					typ = types.NewPointer(typ)
 				}
-
+				var tag string
+				var omitEmpty string = ",omitempty"
 				//! use tag object separately and populate with dgraph
-				tag := `json:"` + field.Name + `"`
+				if fd := field.Directives.ForName("json"); fd != nil {
+
+					if na := fd.Arguments.ForName("noOmitEmpty"); na != nil {
+						if fr, err := na.Value.Value(nil); err == nil {
+							if fr.(bool) == true {
+								omitEmpty = ""
+							}
+						}
+					}
+					if na := fd.Arguments.ForName("name"); na != nil {
+						if fr, err := na.Value.Value(nil); err == nil {
+							tag = `json:"` + fr.(string) + omitEmpty + `"`
+						} else {
+							tag = `json:"` + field.Name + omitEmpty + `"`
+						}
+					}
+				}
 
 				if fd := field.Directives.ForName("dgraph"); fd != nil {
 					if na := fd.Arguments.ForName("tag"); na != nil {
