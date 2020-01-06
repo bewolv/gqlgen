@@ -1,6 +1,7 @@
 package schemaconfig
 
 import (
+	"fmt"
 	"github.com/bewolv/gqlgen/codegen/config"
 	"github.com/bewolv/gqlgen/plugin"
 	"github.com/vektah/gqlparser/ast"
@@ -44,6 +45,8 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 		if schemaType == schema.Query || schemaType == schema.Mutation || schemaType == schema.Subscription {
 			continue
 		}
+
+		fmt.Println("HELLLO")
 
 		if bd := schemaType.Directives.ForName("goModel"); bd != nil {
 			if ma := bd.Arguments.ForName("model"); ma != nil {
