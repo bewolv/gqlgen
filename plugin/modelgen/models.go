@@ -193,7 +193,7 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 				tag := `json:"` + field.Name + `"`
 
 				if fd := field.Directives.ForName("dgraph"); fd != nil {
-					if na := fd.Arguments.ForName("name"); na != nil {
+					if na := fd.Arguments.ForName("tag"); na != nil {
 						if fr, err := na.Value.Value(nil); err == nil {
 							tag += ` dgraph:"` + fr.(string) + `"`
 						}
