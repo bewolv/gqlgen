@@ -1,6 +1,6 @@
 module github.com/bewolv/gqlgen
 
-go 1.12
+go 1.13
 
 require (
 	github.com/go-chi/chi v3.3.2+incompatible
