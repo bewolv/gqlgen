@@ -40,9 +40,9 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 		SkipRuntime: true,
 	}
 
-	// cfg.Directives["json"] = config.DirectiveConfig{
-	// 	SkipRuntime: true,
-	// }
+	cfg.Directives["json"] = config.DirectiveConfig{
+		SkipRuntime: true,
+	}
 
 	for _, schemaType := range schema.Types {
 		if schemaType == schema.Query || schemaType == schema.Mutation || schemaType == schema.Subscription {

@@ -81,17 +81,6 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 		return err
 	}
 
-	// ! Declare dgraph directive
-	cfg.Directives["dgraph"] = config.DirectiveConfig{
-		SkipRuntime: true,
-	}
-
-	cfg.Directives["json"] = config.DirectiveConfig{
-		SkipRuntime: true,
-	}
-
-	// ! --------
-
 	err = cfg.Autobind(schema)
 	if err != nil {
 		return err
