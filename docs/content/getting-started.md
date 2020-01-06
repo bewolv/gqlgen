@@ -65,7 +65,7 @@ type Mutation {
 ### Create the project skeleton
 
 ```bash
-$ go run github.com/99designs/gqlgen init
+$ go run github.com/bewolv/gqlgen init
 ```
 
 This has created an empty skeleton with all files you need:
@@ -102,7 +102,7 @@ models:
 Regenerate by running:
 
 ```bash
-$ go run github.com/99designs/gqlgen -v
+$ go run github.com/bewolv/gqlgen -v
 ```
 
 > Note
@@ -153,7 +153,7 @@ This is a work in progress, we have a way to generate resolver stubs, but it can
 
 ```bash
 $ rm resolver.go
-$ go run github.com/99designs/gqlgen
+$ go run github.com/bewolv/gqlgen
 ```
 
 Now we just need to fill in the `not implemented` parts.  Update `resolver.go`
@@ -240,7 +240,7 @@ query findTodos {
 At the top of our `resolver.go`, between `package` and `import`, add the following line:
 
 ```go
-//go:generate go run github.com/99designs/gqlgen
+//go:generate go run github.com/bewolv/gqlgen
 ```
 
 This magic comment tells `go generate` what command to run when we want to regenerate our code.  To run go generate recursively over your entire project, use this command:

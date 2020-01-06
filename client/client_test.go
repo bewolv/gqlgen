@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/99designs/gqlgen/client"
+	"github.com/bewolv/gqlgen/client"
 	"github.com/stretchr/testify/require"
 )
 

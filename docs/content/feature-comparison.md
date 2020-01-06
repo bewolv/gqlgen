@@ -6,11 +6,11 @@ menu: main
 weight: -1
 ---
 
-| | [gqlgen](https://github.com/99designs/gqlgen) | [gophers](https://github.com/graph-gophers/graphql-go) | [graphql-go](https://github.com/graphql-go/graphql) | [thunder](https://github.com/samsarahq/thunder) |
+| | [gqlgen](https://github.com/bewolv/gqlgen) | [gophers](https://github.com/graph-gophers/graphql-go) | [graphql-go](https://github.com/graphql-go/graphql) | [thunder](https://github.com/samsarahq/thunder) |
 | --------: | :-------- | :-------- | :-------- | :-------- |
 | Kind | schema first | schema first | run time types | struct first |
 | Boilerplate | less | more | more | some |
-| Docs | [docs](https://gqlgen.com) & [examples](https://github.com/99designs/gqlgen/tree/master/example) | [examples](https://github.com/graph-gophers/graphql-go/tree/master/example/starwars) | [examples](https://github.com/graphql-go/graphql/tree/master/examples) | [examples](https://github.com/samsarahq/thunder/tree/master/example)|
+| Docs | [docs](https://gqlgen.com) & [examples](https://github.com/bewolv/gqlgen/tree/master/example) | [examples](https://github.com/graph-gophers/graphql-go/tree/master/example/starwars) | [examples](https://github.com/graphql-go/graphql/tree/master/examples) | [examples](https://github.com/samsarahq/thunder/tree/master/example)|
 | Query | 👍 | 👍 | 👍 | 👍 |
 | Mutation | 👍 | 🚧 [pr](https://github.com/graph-gophers/graphql-go/pull/182) | 👍 | 👍 |
 | Subscription | 👍 | 🚧 [pr](https://github.com/graph-gophers/graphql-go/pull/182) | 👍 | 👍 |
@@ -20,7 +20,7 @@ weight: -1
 | Interfaces | 👍 | 👍 | 👍 | ⛔️ [is](https://github.com/samsarahq/thunder/issues/78) |
 | Generated Enums | 👍 | ⛔️ | ⛔️ | ⛔️ |
 | Generated Inputs | 👍 | ⛔️ | ⛔️ | ⛔️ |
-| Stitching gql | 🕐 [is](https://github.com/99designs/gqlgen/issues/5) | ⛔️ | ⛔️ | ⛔️ |
+| Stitching gql | 🕐 [is](https://github.com/bewolv/gqlgen/issues/5) | ⛔️ | ⛔️ | ⛔️ |
 | Opentracing | 👍 | 👍 | ⛔️ | ✂️[pr](https://github.com/samsarahq/thunder/pull/77) |
 | Hooks for error logging | 👍 | ⛔️ | ⛔️ | ⛔️ |
 | Dataloading | 👍 | 👍 | 👍 | ⚠️ |

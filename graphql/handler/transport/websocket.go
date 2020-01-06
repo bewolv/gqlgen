@@ -10,7 +10,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/99designs/gqlgen/graphql"
+	"github.com/bewolv/gqlgen/graphql"
 	"github.com/gorilla/websocket"
 	"github.com/vektah/gqlparser/gqlerror"
 )

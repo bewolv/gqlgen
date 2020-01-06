@@ -4,9 +4,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/99designs/gqlgen/example/dataloader"
-	"github.com/99designs/gqlgen/graphql/handler"
-	"github.com/99designs/gqlgen/graphql/playground"
+	"github.com/bewolv/gqlgen/example/dataloader"
+	"github.com/bewolv/gqlgen/graphql/handler"
+	"github.com/bewolv/gqlgen/graphql/playground"
 	"github.com/go-chi/chi"
 )
 

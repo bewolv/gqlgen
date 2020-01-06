@@ -122,8 +122,8 @@ func TestAutobinding(t *testing.T) {
 	cfg := Config{
 		Models: TypeMap{},
 		AutoBind: []string{
-			"github.com/99designs/gqlgen/example/chat",
-			"github.com/99designs/gqlgen/example/scalars/model",
+			"github.com/bewolv/gqlgen/example/chat",
+			"github.com/bewolv/gqlgen/example/scalars/model",
 		},
 	}
 
@@ -134,6 +134,6 @@ func TestAutobinding(t *testing.T) {
 
 	require.NoError(t, cfg.Autobind(s))
 
-	require.Equal(t, "github.com/99designs/gqlgen/example/scalars/model.Banned", cfg.Models["Banned"].Model[0])
-	require.Equal(t, "github.com/99designs/gqlgen/example/chat.Message", cfg.Models["Message"].Model[0])
+	require.Equal(t, "github.com/bewolv/gqlgen/example/scalars/model.Banned", cfg.Models["Banned"].Model[0])
+	require.Equal(t, "github.com/bewolv/gqlgen/example/chat.Message", cfg.Models["Message"].Model[0])
 }

@@ -3,11 +3,11 @@ package api
 import (
 	"syscall"
 
-	"github.com/99designs/gqlgen/codegen"
-	"github.com/99designs/gqlgen/codegen/config"
-	"github.com/99designs/gqlgen/plugin"
-	"github.com/99designs/gqlgen/plugin/resolvergen"
-	"github.com/99designs/gqlgen/plugin/schemaconfig"
+	"github.com/bewolv/gqlgen/codegen"
+	"github.com/bewolv/gqlgen/codegen/config"
+	"github.com/bewolv/gqlgen/plugin"
+	"github.com/bewolv/gqlgen/plugin/resolvergen"
+	"github.com/bewolv/gqlgen/plugin/schemaconfig"
 	"github.com/bewolv/gqlgen/plugin/modelgen"
 	"github.com/pkg/errors"
 	"golang.org/x/tools/go/packages"

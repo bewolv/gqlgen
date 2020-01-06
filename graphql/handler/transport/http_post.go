@@ -4,7 +4,7 @@ import (
 	"mime"
 	"net/http"
 
-	"github.com/99designs/gqlgen/graphql"
+	"github.com/bewolv/gqlgen/graphql"
 )
 
 // POST implements the POST side of the default HTTP transport

@@ -3,8 +3,8 @@ package selection
 import (
 	"testing"
 
-	"github.com/99designs/gqlgen/client"
-	"github.com/99designs/gqlgen/graphql/handler"
+	"github.com/bewolv/gqlgen/client"
+	"github.com/bewolv/gqlgen/graphql/handler"
 	"github.com/stretchr/testify/require"
 )
 

@@ -3,10 +3,10 @@ package starwars
 import (
 	"testing"
 
-	"github.com/99designs/gqlgen/client"
-	"github.com/99designs/gqlgen/example/starwars/generated"
-	"github.com/99designs/gqlgen/graphql/handler"
-	"github.com/99designs/gqlgen/graphql/introspection"
+	"github.com/bewolv/gqlgen/client"
+	"github.com/bewolv/gqlgen/example/starwars/generated"
+	"github.com/bewolv/gqlgen/graphql/handler"
+	"github.com/bewolv/gqlgen/graphql/introspection"
 	"github.com/stretchr/testify/require"
 )
 

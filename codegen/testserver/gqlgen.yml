@@ -10,7 +10,7 @@ resolver:
   type: Resolver
 
 autobind:
-  - "github.com/99designs/gqlgen/codegen/testserver"
-  - "github.com/99designs/gqlgen/codegen/testserver/introspection"
-  - "github.com/99designs/gqlgen/codegen/testserver/invalid-packagename"
+  - "github.com/bewolv/gqlgen/codegen/testserver"
+  - "github.com/bewolv/gqlgen/codegen/testserver/introspection"
+  - "github.com/bewolv/gqlgen/codegen/testserver/invalid-packagename"
 

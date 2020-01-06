@@ -26,7 +26,7 @@ func TestSlicePointerBinding(t *testing.T) {
 			panic(err)
 		}
 
-		require.Equal(t, ta.GO.String(), "[]*github.com/99designs/gqlgen/example/chat.Message")
+		require.Equal(t, ta.GO.String(), "[]*github.com/bewolv/gqlgen/example/chat.Message")
 	})
 
 	t.Run("with OmitSliceElementPointers", func(t *testing.T) {
@@ -39,14 +39,14 @@ func TestSlicePointerBinding(t *testing.T) {
 			panic(err)
 		}
 
-		require.Equal(t, ta.GO.String(), "[]github.com/99designs/gqlgen/example/chat.Message")
+		require.Equal(t, ta.GO.String(), "[]github.com/bewolv/gqlgen/example/chat.Message")
 	})
 }
 
 func createBinder(cfg Config) (*Binder, *ast.Schema) {
 	cfg.Models = TypeMap{
 		"Message": TypeMapEntry{
-			Model: []string{"github.com/99designs/gqlgen/example/chat.Message"},
+			Model: []string{"github.com/bewolv/gqlgen/example/chat.Message"},
 		},
 	}
 

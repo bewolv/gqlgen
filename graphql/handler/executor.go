@@ -3,7 +3,7 @@ package handler
 import (
 	"context"
 
-	"github.com/99designs/gqlgen/graphql"
+	"github.com/bewolv/gqlgen/graphql"
 	"github.com/vektah/gqlparser/ast"
 	"github.com/vektah/gqlparser/gqlerror"
 	"github.com/vektah/gqlparser/parser"

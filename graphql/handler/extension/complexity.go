@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/99designs/gqlgen/complexity"
-	"github.com/99designs/gqlgen/graphql"
+	"github.com/bewolv/gqlgen/complexity"
+	"github.com/bewolv/gqlgen/graphql"
 	"github.com/vektah/gqlparser/gqlerror"
 )
 

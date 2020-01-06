@@ -8,7 +8,7 @@ import (
 
 	"github.com/vektah/gqlparser/gqlerror"
 
-	"github.com/99designs/gqlgen/graphql"
+	"github.com/bewolv/gqlgen/graphql"
 	"github.com/mitchellh/mapstructure"
 )
 

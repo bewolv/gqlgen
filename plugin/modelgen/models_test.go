@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/99designs/gqlgen/codegen/config"
+	"github.com/bewolv/gqlgen/codegen/config"
 	"github.com/stretchr/testify/require"
 )
 

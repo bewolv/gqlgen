@@ -3,8 +3,8 @@ package testserver
 import (
 	"context"
 
-	introspection1 "github.com/99designs/gqlgen/codegen/testserver/introspection"
-	invalid_packagename "github.com/99designs/gqlgen/codegen/testserver/invalid-packagename"
+	introspection1 "github.com/bewolv/gqlgen/codegen/testserver/introspection"
+	invalid_packagename "github.com/bewolv/gqlgen/codegen/testserver/invalid-packagename"
 )
 
 // THIS CODE IS A STARTING POINT ONLY. IT WILL NOT BE UPDATED WITH SCHEMA CHANGES.

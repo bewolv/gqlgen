@@ -1,8 +1,8 @@
 package schemaconfig
 
 import (
-	"github.com/99designs/gqlgen/codegen/config"
-	"github.com/99designs/gqlgen/plugin"
+	"github.com/bewolv/gqlgen/codegen/config"
+	"github.com/bewolv/gqlgen/plugin"
 	"github.com/vektah/gqlparser/ast"
 )
 
@@ -29,6 +29,10 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 	}
 
 	cfg.Directives["goModel"] = config.DirectiveConfig{
+		SkipRuntime: true,
+	}
+
+	cfg.Directives["dgraph"] = config.DirectiveConfig{
 		SkipRuntime: true,
 	}
 

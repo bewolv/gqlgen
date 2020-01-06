@@ -17,9 +17,9 @@ package main
 import (
     "net/http"
 
-	"github.com/99designs/gqlgen/graphql/handler/transport"
-    "github.com/99designs/gqlgen/example/starwars"
-	"github.com/99designs/gqlgen/graphql/handler"
+	"github.com/bewolv/gqlgen/graphql/handler/transport"
+    "github.com/bewolv/gqlgen/example/starwars"
+	"github.com/bewolv/gqlgen/graphql/handler"
 	"github.com/go-chi/chi"
 	"github.com/rs/cors"
 )

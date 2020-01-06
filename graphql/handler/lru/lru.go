@@ -1,7 +1,7 @@
 package lru
 
 import (
-	"github.com/99designs/gqlgen/graphql"
+	"github.com/bewolv/gqlgen/graphql"
 	lru "github.com/hashicorp/golang-lru"
 )
 

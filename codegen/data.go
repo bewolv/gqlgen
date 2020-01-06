@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/99designs/gqlgen/codegen/config"
+	"github.com/bewolv/gqlgen/codegen/config"
 	"github.com/pkg/errors"
 	"github.com/vektah/gqlparser/ast"
 )
