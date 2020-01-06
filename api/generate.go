@@ -6,9 +6,9 @@ import (
 	"github.com/99designs/gqlgen/codegen"
 	"github.com/99designs/gqlgen/codegen/config"
 	"github.com/99designs/gqlgen/plugin"
-	"github.com/99designs/gqlgen/plugin/modelgen"
 	"github.com/99designs/gqlgen/plugin/resolvergen"
 	"github.com/99designs/gqlgen/plugin/schemaconfig"
+	"github.com/bewolv/gqlgen/plugin/modelgen"
 	"github.com/pkg/errors"
 	"golang.org/x/tools/go/packages"
 )
