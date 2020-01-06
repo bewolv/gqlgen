@@ -81,6 +81,13 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 		return err
 	}
 
+	// ! Declare dgraph directive
+	cfg.Directives["dgraph"] = config.DirectiveConfig{
+		SkipRuntime: true,
+	}
+
+	// ! --------
+
 	err = cfg.Autobind(schema)
 	if err != nil {
 		return err
@@ -182,11 +189,22 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 					typ = types.NewPointer(typ)
 				}
 
+				//! use tag object separately and populate with dgraph
+				tag := `json:"` + field.Name + `"`
+
+				if fd := field.Directives.ForName("dgraph"); fd != nil {
+					if na := fd.Arguments.ForName("name"); na != nil {
+						if fr, err := na.Value.Value(nil); err == nil {
+							tag += ` dgraph:"` + fr.(string) + `"`
+						}
+					}
+				}
+				//! -----------------------------------
 				it.Fields = append(it.Fields, &Field{
 					Name:        name,
 					Type:        typ,
 					Description: field.Description,
-					Tag:         `json:"` + field.Name + `"`,
+					Tag:         tag,
 				})
 			}
 
