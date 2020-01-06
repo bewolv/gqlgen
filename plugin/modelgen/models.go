@@ -181,8 +181,9 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 				if isStruct(typ) && (fieldDef.Kind == ast.Object || fieldDef.Kind == ast.InputObject) {
 					typ = types.NewPointer(typ)
 				}
-				var tag string
+
 				var omitEmpty string = ",omitempty"
+				var tag string = `json:"` + field.Name + omitEmpty + `"`
 				//! use tag object separately and populate with dgraph
 				if fd := field.Directives.ForName("json"); fd != nil {
 
@@ -193,11 +194,10 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 							}
 						}
 					}
+
 					if na := fd.Arguments.ForName("name"); na != nil {
 						if fr, err := na.Value.Value(nil); err == nil {
 							tag = `json:"` + fr.(string) + omitEmpty + `"`
-						} else {
-							tag = `json:"` + field.Name + omitEmpty + `"`
 						}
 					}
 				}
