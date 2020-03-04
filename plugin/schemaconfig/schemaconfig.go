@@ -36,6 +36,10 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 		SkipRuntime: true,
 	}
 
+	cfg.Directives["validator"] = config.DirectiveConfig{
+		SkipRuntime: true,
+	}
+
 	cfg.Directives["goField"] = config.DirectiveConfig{
 		SkipRuntime: true,
 	}

@@ -183,6 +183,7 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 				}
 
 				var omitEmpty string = ",omitempty"
+				// Each field has a generated json tag with omitEmpty
 				var tag string = `json:"` + field.Name + omitEmpty + `"`
 				//! use tag object separately and populate with dgraph
 				if fd := field.Directives.ForName("json"); fd != nil {
@@ -209,6 +210,18 @@ func (m *Plugin) MutateConfig(cfg *config.Config) error {
 						}
 					}
 				}
+
+				// Add validator tags
+				if fd := field.Directives.ForName("validator"); fd != nil {
+					if na := fd.Arguments.ForName("tags"); na != nil {
+						if fr, err := na.Value.Value(nil); err == nil {
+							if fr.(string) != "" {
+								tag += ` validator:"` + fr.(string) + `"`
+							}
+						}
+					}
+				}
+
 				//! -----------------------------------
 				it.Fields = append(it.Fields, &Field{
 					Name:        name,
